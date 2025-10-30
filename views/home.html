@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vacation Booking</title>
+  <link href="/styles/styles.css" rel="stylesheet">
+  <link rel="icon" type="image/png" href="/images/6350271.png">
+  <script src="/js/vacation.js" defer ></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div id="overlay">
+        <img src="https://bit.ly/305-vacation" alt="picture of a beach">
+        <div id="text-overlay">Book Your Dream Vacation</div>
+      </div>
+    </header>
+    <form id="vacation-form" action="submit-travel" method="post">
+        <fieldset>
+            <div id="distination-div">
+                <label id="distination-label" class="labels">Destination</label>
+                <div id="destination-dropdown">
+                    <select id="choose-dropdown" name="where">
+                        <option value="none">Choose a destination...</option>
+                        <option value="seattle">Seattle, WA</option>
+                        <option value="morrobay">Morro Bay, CA</option>
+                        <option value="yorktown">Yorktown ,VA</option>
+                        <option value="capemay">Cape May, NJ</option>
+                        <option value="portland">Portland, OR</option>
+                    </select>
+                        <span id="err-dropdown" class="error" >********Destination is Required********</span>
+                </div>
+            </div>
+            <div id="bottom-div">
+                <div id="departure-div">
+                    <label id="departure-div-input" class="labels">Departure Date</label>
+                        <div id="date-input" >
+                            <input type="date" id="travel-date" name="tdate">
+                        </div>
+                </div>
+                <div id="traveler-div">
+                    <label id="traveler-label" class="labels">Number of Travelers</label>
+                        <div id="number-input">
+                        <input type="number" id="num-input" placeholder="0" name="travelers">
+                            <span id="err-number" class="error" >**Travelers has to be greater than 0**</span>
+
+                        </div>
+                </div>
+            </div>
+            <div id="button-div">
+                <button type="submit">Find My Vacation</button>
+            </div>
+
+        </fieldset>
+        <footer>
+            <a href="https://github.com/ConnorJohnHughes/vacation-booking.git">GitHub Repository: https://github.com/ConnorJohnHughes/vacation-booking.git</a>
+        </footer>
+    </form>
+  </main>
+</body>
+</html>
